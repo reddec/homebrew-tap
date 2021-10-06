@@ -5,33 +5,33 @@
 class Wd < Formula
   desc "Yet another webhook daemon"
   homepage "https://github.com/reddec/wd"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/reddec/wd/releases/download/v0.0.5/wd_0.0.5_darwin_arm64.tar.gz"
-      sha256 "6951920ef36b8633203df8a3d61ab238f34dfb1f04baa32b450238cbe60246ca"
+      url "https://github.com/reddec/wd/releases/download/v0.0.6/wd_0.0.6_darwin_arm64.tar.gz"
+      sha256 "8ef42c658c1049066ecc120ed7ee3292d7ef6f504a816f332fc06d6906c4cbdc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/wd/releases/download/v0.0.5/wd_0.0.5_darwin_amd64.tar.gz"
-      sha256 "38d37838b79d041ab84f03c07ccb279d5a666c06bd6467494b1ef0988c950a39"
+      url "https://github.com/reddec/wd/releases/download/v0.0.6/wd_0.0.6_darwin_amd64.tar.gz"
+      sha256 "8564c6d4a43a0c383d3130106ef3dabb9ae0af02f24dc9cbfdc476ecd31b5213"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/reddec/wd/releases/download/v0.0.5/wd_0.0.5_linux_amd64.tar.gz"
-      sha256 "47cbf143de0d1735994efb69de988712d6d7784ba0c9add292b6a8402b4e48c5"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/wd/releases/download/v0.0.5/wd_0.0.5_linux_armv6.tar.gz"
-      sha256 "f82f8ca9a38c80f82161b96707ad171c012d164028ed74d91d8da947d98d8d41"
+      url "https://github.com/reddec/wd/releases/download/v0.0.6/wd_0.0.6_linux_armv6.tar.gz"
+      sha256 "0f06c9fb6ad738682d0049c765c0b2c28b3d1faa6b6de539b04af1f09c535465"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/wd/releases/download/v0.0.5/wd_0.0.5_linux_arm64.tar.gz"
-      sha256 "513d5dcb47d6ed19036eaefa93bf1636e879618d08fb068c0303b54092cb988c"
+      url "https://github.com/reddec/wd/releases/download/v0.0.6/wd_0.0.6_linux_arm64.tar.gz"
+      sha256 "6fe16ffb9128da3195bac4cee7d48b6fc9c08046a44458597aae960de5a75b19"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/reddec/wd/releases/download/v0.0.6/wd_0.0.6_linux_amd64.tar.gz"
+      sha256 "345b9d2ab5059d133a1059b5059c04337db6db6b4cbeb986c0bc4a445c39cf75"
     end
   end
 
