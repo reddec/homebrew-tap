@@ -5,33 +5,33 @@
 class Wd < Formula
   desc "Yet another webhook daemon"
   homepage "https://github.com/reddec/wd"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/wd/releases/download/v0.0.3/wd_0.0.3_darwin_amd64.tar.gz"
-      sha256 "fb8be5dd52cd7e26ad64fa7cc8977bfad291a4da432c5148b1fd8d661031cf88"
+      url "https://github.com/reddec/wd/releases/download/v0.0.4/wd_0.0.4_darwin_amd64.tar.gz"
+      sha256 "b4494956f64d534ab9d1c5f090164fd4144c631dedc9843ec983beecc7d21274"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reddec/wd/releases/download/v0.0.3/wd_0.0.3_darwin_arm64.tar.gz"
-      sha256 "ff5c752202bd3f04811ca2a0be9478df9dc0677a140d0c71bed7622cb919dc5f"
+      url "https://github.com/reddec/wd/releases/download/v0.0.4/wd_0.0.4_darwin_arm64.tar.gz"
+      sha256 "0fc4e77187dc51512f5eb985a9622feb0ce7a3d10e3dc9f319b0e7b87a0919d1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/wd/releases/download/v0.0.3/wd_0.0.3_linux_amd64.tar.gz"
-      sha256 "ef3b2bcfb4168aaecdec3e46fc8235ef00acc574559e05174cd1a78ec88536a0"
+      url "https://github.com/reddec/wd/releases/download/v0.0.4/wd_0.0.4_linux_amd64.tar.gz"
+      sha256 "6b372d8f35782750c278833754bdc93133201a26062d2c4835d6a56fb7407a20"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/wd/releases/download/v0.0.3/wd_0.0.3_linux_armv6.tar.gz"
-      sha256 "73369ee2546f627597f5da59dc27ebe8ba70323b4c9570ea0dd8f490f124f4a6"
+      url "https://github.com/reddec/wd/releases/download/v0.0.4/wd_0.0.4_linux_armv6.tar.gz"
+      sha256 "28d54cd3552383768e2534880cac87d4b01135f881821d07833229bc928e9518"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/wd/releases/download/v0.0.3/wd_0.0.3_linux_arm64.tar.gz"
-      sha256 "6bd5c7e705b4b5dfcea7fd638d8faf5951a1c27cc7fcfce3e958b59ddf4a43f1"
+      url "https://github.com/reddec/wd/releases/download/v0.0.4/wd_0.0.4_linux_arm64.tar.gz"
+      sha256 "ca31ecb26dcd6c7f34dd01ac5afd8eb654164ea0edff82ff21da4c98a71bfc31"
     end
   end
 
