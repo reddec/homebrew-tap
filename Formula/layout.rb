@@ -5,21 +5,21 @@
 class Layout < Formula
   desc "Tool for creating new project from template"
   homepage "https://github.com/reddec/layout"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/reddec/layout/releases/download/v1.0.0/layout_darwin_arm64.tar.gz"
-      sha256 "f448ddf4be8da4147c580b7cc3e61e0eae137adf75299c9fa33686b678b44a75"
+    if Hardware::CPU.intel?
+      url "https://github.com/reddec/layout/releases/download/v1.1.0/layout_darwin_amd64.tar.gz"
+      sha256 "59f145e67baaa20e388e46bc7b67c577fd0d9233f0c624a736011b020abe8701"
 
       def install
         bin.install "layout"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.0.0/layout_darwin_amd64.tar.gz"
-      sha256 "92b693ca1944820e3218fd237f047ed44fda84e2164d3173386568764420872c"
+    if Hardware::CPU.arm?
+      url "https://github.com/reddec/layout/releases/download/v1.1.0/layout_darwin_arm64.tar.gz"
+      sha256 "c829c0a4f13e199deae6a8824eaffbfbeed65477ca96c4dfd7ee3fe7ddbe2318"
 
       def install
         bin.install "layout"
@@ -28,17 +28,17 @@ class Layout < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/layout/releases/download/v1.0.0/layout_linux_arm64.tar.gz"
-      sha256 "e5717eb664ca1a6358e200bb9cebff6f98b36bf1a1e0dcbcd4c76ba038a2c561"
+    if Hardware::CPU.intel?
+      url "https://github.com/reddec/layout/releases/download/v1.1.0/layout_linux_amd64.tar.gz"
+      sha256 "ed9f2f6b7391d985939394173f6879e028f2bf029a4b3c4bad038b6d0a6d39a5"
 
       def install
         bin.install "layout"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.0.0/layout_linux_amd64.tar.gz"
-      sha256 "f4a3166c1b82979f2745c5714ea7ee4bd48a202a86d875484f637ae72452363e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/reddec/layout/releases/download/v1.1.0/layout_linux_arm64.tar.gz"
+      sha256 "f8946b1ac63ce832fcd520b53f9f5de0975f28e7e4a7950af839cc2b2fd237fd"
 
       def install
         bin.install "layout"
