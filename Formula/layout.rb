@@ -5,21 +5,21 @@
 class Layout < Formula
   desc "Tool for creating new project from template"
   homepage "https://github.com/reddec/layout"
-  version "1.3.0"
+  version "1.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/reddec/layout/releases/download/v1.3.0/layout_darwin_arm64.tar.gz"
-      sha256 "592306da0244fb9ef002726ea70ee12890ce50a9dab918b768d9722e17873b53"
+      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_darwin_arm64.tar.gz"
+      sha256 "cb55dcf1f467fa4526587abac16fcd5ab3c3432ab6e2c63094bf139de07e6856"
 
       def install
         bin.install "layout"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.3.0/layout_darwin_amd64.tar.gz"
-      sha256 "05e2e0f37751042f75808ba38a50106039fd011cfb0157453bc59845796b7c41"
+      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_darwin_amd64.tar.gz"
+      sha256 "7705e9489d3d2c84ef84e2cb4fec53bf26a6af27140251f3aa0d3c54cdac1886"
 
       def install
         bin.install "layout"
@@ -28,17 +28,17 @@ class Layout < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.3.0/layout_linux_amd64.tar.gz"
-      sha256 "d23028aac698b7939275c42e4c6454766b2d709f13f81d692044cc8ea10a06bc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_linux_arm64.tar.gz"
+      sha256 "7ca7d134e5e43eb47a3642dfce4f31721188bafe1159ce7024291b22b6002ddd"
 
       def install
         bin.install "layout"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/layout/releases/download/v1.3.0/layout_linux_arm64.tar.gz"
-      sha256 "1aef1edcfbcc8bd32da19c9917a6087bc055d1c3ee9613cabc8adeefef43ab38"
+    if Hardware::CPU.intel?
+      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_linux_amd64.tar.gz"
+      sha256 "db99efa7e3b5e5012739fbb6ae98c7f0837e67223cf09a9c6664ff2c50b40a48"
 
       def install
         bin.install "layout"
