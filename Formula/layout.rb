@@ -5,21 +5,21 @@
 class Layout < Formula
   desc "Tool for creating new project from template"
   homepage "https://github.com/reddec/layout"
-  version "1.3.1"
+  version "1.3.2"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_darwin_arm64.tar.gz"
-      sha256 "cb55dcf1f467fa4526587abac16fcd5ab3c3432ab6e2c63094bf139de07e6856"
+    if Hardware::CPU.intel?
+      url "https://github.com/reddec/layout/releases/download/v1.3.2/layout_darwin_amd64.tar.gz"
+      sha256 "70837a3356242b7bab60e5403c49dbe17fbc9d6049f1552ab8da57ac0b66a10d"
 
       def install
         bin.install "layout"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_darwin_amd64.tar.gz"
-      sha256 "7705e9489d3d2c84ef84e2cb4fec53bf26a6af27140251f3aa0d3c54cdac1886"
+    if Hardware::CPU.arm?
+      url "https://github.com/reddec/layout/releases/download/v1.3.2/layout_darwin_arm64.tar.gz"
+      sha256 "b86f748a9cf997fedc5743ff417185e5aff313a5d99bf0b2f890818fef708148"
 
       def install
         bin.install "layout"
@@ -29,16 +29,16 @@ class Layout < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_linux_arm64.tar.gz"
-      sha256 "7ca7d134e5e43eb47a3642dfce4f31721188bafe1159ce7024291b22b6002ddd"
+      url "https://github.com/reddec/layout/releases/download/v1.3.2/layout_linux_arm64.tar.gz"
+      sha256 "df1fdc383706a1e64fb0ed5b85e65960e518093aaf79a05b2d006f10c71aa5a6"
 
       def install
         bin.install "layout"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.3.1/layout_linux_amd64.tar.gz"
-      sha256 "db99efa7e3b5e5012739fbb6ae98c7f0837e67223cf09a9c6664ff2c50b40a48"
+      url "https://github.com/reddec/layout/releases/download/v1.3.2/layout_linux_amd64.tar.gz"
+      sha256 "1fe59309a00a5ba7879ee0c213acf03fe2354eb5522b684f982e853f65f4dcaf"
 
       def install
         bin.install "layout"
