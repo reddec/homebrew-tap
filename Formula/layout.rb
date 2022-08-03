@@ -5,21 +5,21 @@
 class Layout < Formula
   desc "Tool for creating new project from template"
   homepage "https://github.com/reddec/layout"
-  version "1.3.3"
+  version "1.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/reddec/layout/releases/download/v1.3.3/layout_darwin_arm64.tar.gz"
-      sha256 "b1bdf00cd7342a42e1475813467f9662efabca9917b4989388f90bb5c870b4e5"
+      url "https://github.com/reddec/layout/releases/download/v1.4.0/layout_darwin_arm64.tar.gz"
+      sha256 "ab404ca450872dcd91835b95b6422b46cd859113162a12c158241dadf4221c07"
 
       def install
         bin.install "layout"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.3.3/layout_darwin_amd64.tar.gz"
-      sha256 "b15604012df26730c82c1ed5421d230155d1bb7fb751c2f4349cb296f226c659"
+      url "https://github.com/reddec/layout/releases/download/v1.4.0/layout_darwin_amd64.tar.gz"
+      sha256 "246085bd36d2c426dc6a239222f222d0d4d5b14deb18fd438d460f6096b59b2e"
 
       def install
         bin.install "layout"
@@ -29,16 +29,16 @@ class Layout < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reddec/layout/releases/download/v1.3.3/layout_linux_arm64.tar.gz"
-      sha256 "9beafbb7f5c8f7d7ba3cab6747a595e007ecde2496432908fb32456c0a0a5107"
+      url "https://github.com/reddec/layout/releases/download/v1.4.0/layout_linux_arm64.tar.gz"
+      sha256 "1e1b6a2a2929afc79b817ebe0a0cb470dadcff191d25b7a4ab0af86a2e6d71d6"
 
       def install
         bin.install "layout"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reddec/layout/releases/download/v1.3.3/layout_linux_amd64.tar.gz"
-      sha256 "934c3f17fb7145a2e62034395820fd64db22d771c9078ee17e3a519baf384aec"
+      url "https://github.com/reddec/layout/releases/download/v1.4.0/layout_linux_amd64.tar.gz"
+      sha256 "005cf146eca9fcd3ba6ac18b92ea59ff8c8bf73907904ecb2cdc54bfc1d9eb05"
 
       def install
         bin.install "layout"
